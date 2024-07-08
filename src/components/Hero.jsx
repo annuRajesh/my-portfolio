@@ -9,7 +9,7 @@ const Hero = () => {
           </div>
           <div className="flex flex-col justify-center ">
             <h1 className=" text-7xl text-center py-48 text-white font-light">
-              Hi, I'm <span className="text-customGray">Annu Rajesh</span>
+              Hi, I'm <br/> <span className="text-customGray">Annu Rajesh</span>
             </h1>
             <button className="text-white border py-3  items-center">
                 <a href="mailto:joannetsengannu@gmail.com">Contact Me</a>

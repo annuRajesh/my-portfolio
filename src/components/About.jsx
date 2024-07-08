@@ -1,7 +1,7 @@
 const About=()=>{
     return(
         <>
-        <div className="container mx-auto bg-secondary my-32 py-36">
+        <div className="container mx-auto  bg-secondary my-32 py-36">
             <h2 className="text-center text-5xl text-white pb-10">About</h2>
             <p className="text-center text-white text-lg px-3">
             Hello, and thank you for visiting my portfolio! I'm Annu Rajesh, a versatile creative professional who thrives at the intersection of web development, music, and adventure. This is the space where my love for coding, passion for singing, and zest for an active life come together to create a unique fusion of talents.
