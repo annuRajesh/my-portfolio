@@ -1,8 +1,24 @@
-# React + Vite
+Refresh
+# Annu Rajesh Portfolio
+This is my personal small portfolio developed using React.js and Tailwind CSS.
+### Technologies used
+React: A JavaScript library for building user interfaces.
+Tailwind CSS: A utility-first CSS framework for rapid UI development.
+JavaScript: The programming language of the web.
+HTML: The standard markup language for creating web pages.
+CSS: A style sheet language used for describing the presentation of a document written in HTML.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Steps
+1. **Install depedencies:**
+```
+npm install
+```
+2. **Run the server:**
+```
+npm run dev
+```
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
