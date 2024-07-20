@@ -34,18 +34,20 @@ const Timeline = () => {
     }
   }, [isView]);
   return (
-    <div className="container mx-auto my-2  items-center">
+    <motion.div
+    ref={ref}
+    variants={{
+      hidden1: { opacity: 0 },
+      visible1: { opacity: 1 },
+    }}
+    initial="hidden1"
+    animate={controls}
+    transition={{ duration: 1, delay: 0.1 }}
+     className="container mx-auto my-2  items-center">
       <h1 className="text-white text-center text-5xl">TimeLine</h1>
       {content.map((item, index) => (
         <motion.div
-          ref={ref}
-          variants={{
-            hidden1: { opacity: 0 },
-            visible1: { opacity: 1 },
-          }}
-          initial="hidden1"
-          animate={controls}
-          transition={{ duration: 1, delay: 0.1 }}
+         
           className="flex flex-row justify-center items-center my-12"
         >
           <div className="   max-w-4 mr-16">
@@ -71,7 +73,7 @@ const Timeline = () => {
           </motion.div>
         </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 export default Timeline;
