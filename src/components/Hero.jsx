@@ -44,7 +44,7 @@ const Hero = () => {
             <motion.div ref={ref} initial='start' variants={variants3} animate={controls} transition={{duration:0.5,delay:0.3}} className="w-3/4 h-2 bg-gray-400 m-1"></motion.div>
             <motion.div ref={ref} initial='start' variants={variants4} animate={controls} transition={{duration:0.5,delay:0.3}} className="w-full h-2 bg-gray-400 m-1"></motion.div>
 
-            <motion.h1 ref={ref} variants={nameVariants} initial='start' animate={controls}  className=" md:text-5xl text-3xl md:text-start text-center   text-white font-light">
+            <motion.h1 ref={ref} variants={nameVariants} initial='start' animate={controls}  className=" md:text-5xl text-3xl text-start    text-white font-light">
               Hi, I'm <br/><span className="text-customGray md:text-7xl lg:text-5xl text-5xl ">Annu Rajesh</span>
             </motion.h1>
             <motion.div ref={ref} initial='start' variants={variants4} animate={controls} transition={{duration:0.5,delay:0.3}} className="w-full h-2 bg-gray-400 m-1"></motion.div>
