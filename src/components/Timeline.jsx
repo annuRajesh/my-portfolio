@@ -1,79 +1,84 @@
-import { useRef, useEffect } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
 const Timeline = () => {
-  const content = [
+  const timeline = [
+   
     {
-      heading: "March 2020",
-      description: "Completed my schooling from St. Antonys Public School",
+
+      month: 'December',
+      year: '2001',
+      descriptions: [
+        'This beautiful me has been born',
+        
+      ]
     },
     {
-      heading: "Augest 2020",
-      description:
-        "Joined B.tech programme St. Josephs College of Engineering and Technology",
+      month:'June',
+      year:'2007',
+      descriptions:[
+        'I did my schooling in St. Antonys Public School Anakkal',
+        'For the 12 years I have been active and energetic and was engaged in cultural programs',
+       
+      ]
     },
     {
-      heading: "September 2020",
-      description: "Learned basics of web page creation with HTML and CSS",
+      month:'march',
+      year:'2020'
+      ,descriptions:[
+         'I completed my schooling in March 2020',
+
+      ]
     },
     {
-      heading: "February 2021",
-      description: "Learnt Tailwind CSS and started applying.",
+      month: 'June',
+      year: '2020',
+      descriptions: [
+        'I joined the Computer Science and Engineering B.Tech program in 2020',
+        'I was not from a coding environment',
+        'I learned HTML and CSS through workshops provided by the college',
+        'I started designing web pages',
+        'I was also part of the Music Club in our College',
+        'Also involved in activities provided by IEDC'
+      ]
     },
     {
-      heading: "July 2024",
-      description: "Graduated from college.",
-    },
-  ];
-  const ref = useRef(null);
-  const isView = useInView(ref, { once: true });
-  const controls = useAnimation();
-  useEffect(() => {
-    if (isView) {
-      controls.start("visible");
-      controls.start("visible1");
+      month: 'July',
+      year: '2024',
+      descriptions: [
+        'I graduated with my friends',
+        'I started learning how to develop dynamic websites',
+        'I learned Framer Motion, React.js, and Tailwind CSS',
+        'I started applying my skills on projects',
+        'I began my self-learning process'
+      ]
     }
-  }, [isView]);
+  ];
+
   return (
-    <motion.div
-    ref={ref}
-    variants={{
-      hidden1: { opacity: 0 },
-      visible1: { opacity: 1 },
-    }}
-    initial="hidden1"
-    animate={controls}
-    transition={{ duration: 1, delay: 0.1 }}
-     className="container mx-auto my-2  items-center">
-      <h1 className="text-white text-center text-5xl">TimeLine</h1>
-      {content.map((item, index) => (
-        <motion.div
-         
-          className="flex flex-row justify-center items-center my-12"
-        >
-          <div className="   max-w-4 mr-16">
-            <h2 className="text-white">{item.heading}</h2>
+    <div className="container mx-auto py-10">
+      <h1 className="text-5xl bg-gradient-to-b from-secondary to-gray-300 text-transparent bg-clip-text m-4">My Life Evolutions</h1>
+      <div className="relative m-4">
+        {timeline.map((item, index) => (
+          <div key={index} className=" mb-12">
+            
+
+          
+            <div className="flex flex-col md:flex-row  gap-6">
+              <div className=" text-left">
+                <h2 className="text-white text-xl font-semibold">{item.month}</h2>
+                <h1 className="text-slate-300 text-4xl">{item.year}</h1>
+              </div>
+              <div className="flex-1">
+                <ul className="list-disc list-outside text-customGray">
+                  {item.descriptions.map((description, i) => (
+                    <li key={i}>{description}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col justify-center items-center md:ml-16 ml-16  ">
-            <div className="h-2 w-2 border rounded-full"></div>
-            <motion.div
-              ref={ref}
-              variants={{
-                hidden: { height: 0 },
-                visible: { height: 208 },
-              }}
-              initial="hidden"
-              animate={controls}
-              transition={{ duration: 0.5 }}
-              className="w-0.2  border"
-            ></motion.div>
-          </div>
-          <div className="h-0.2 w-10 border"></div>
-          <motion.div className=" border p-4 rounded-lg bg-secondary ">
-            <p className="text-white max-w-28  ">{item.description}</p>
-          </motion.div>
-        </motion.div>
-      ))}
-    </motion.div>
+        ))}
+      </div>
+    </div>
   );
 };
+
 export default Timeline;

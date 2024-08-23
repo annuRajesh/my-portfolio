@@ -1,25 +1,26 @@
-import image2 from "../assets/images/html.png";
-import image3 from "../assets/images/css-logo.png";
-import image4 from "../assets/images/tailwind.png";
-import image5 from "../assets/images/React.png";
+
+
+const skills=[  'HTML',
+  'CSS',
+  'Javascript',
+  'React.Js',
+  'Tailwind CSS',
+  'Framer Motion']
+
 const Skills = () => {
-    const imageLink=[image2,image3,image4,image5]
+   
   return (
     <>
-    <div className="container mx-auto  ">
-        <h1 className="text-white text-center text-5xl py-10">My Skills</h1>
-
-      <div className=" mx-auto grid grid-cols-2 gap-2 items-center max-w-[400px] gap-x-16 gap-y-8 pb-10">
-        {
-
-       imageLink.map((item,index)=>
-        <div>
-            <img key={index} src={item} alt="" />
-        </div>
-    )
-        }
-      </div>
+   <div className="container mx-auto mb-8">
+    <h1 className="bg-gradient-to-b from-secondary to-gray-400 text-transparent bg-clip-text text-5xl">What I Work With</h1>
+    <div className=" inline-grid md:grid-cols-6 grid-cols-3 gap-4 p-3">
+    {
+      skills.map((item,index)=>
+      <div key={index} className="text-white px-1 py-2 text-center border md:w-full w-fit rounded-md hover:bg-white hover:text-black">{item}</div>)
+    }
     </div>
+
+   </div>
     </>
   );
 };
