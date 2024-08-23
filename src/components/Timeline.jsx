@@ -1,3 +1,6 @@
+import { useAnimation, useInView,motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+
 const Timeline = () => {
   const timeline = [
    
@@ -51,13 +54,25 @@ const Timeline = () => {
       ]
     }
   ];
+  const variants={
+    initial:{opacity:0,y:30},
+    visible:{opacity:1,y:0}
+  }
+  const ref=useRef()
+    const isView=useInView(ref,{once:true})
+    const controls=useAnimation()
+    useEffect(()=>{
+      if(isView){
+        controls.start('visible')
+      }
+    })
 
   return (
     <div className="container mx-auto py-10">
-      <h1 className="text-4xl bg-gradient-to-b from-secondary to-gray-300 text-transparent bg-clip-text m-4">My Life Evolutions</h1>
+      <motion.h1 className="text-4xl bg-gradient-to-b from-secondary to-gray-300 text-transparent bg-clip-text m-4" ref={ref} variants={variants} initial='initial' animate={controls}>My Life Evolutions</motion.h1>
       <div className="relative m-4">
         {timeline.map((item, index) => (
-          <div key={index} className=" mb-12">
+          <motion.div key={index} className=" mb-12" ref={ref} variants={variants} initial='initial' animate={controls}>
             
 
           
@@ -74,7 +89,7 @@ const Timeline = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
