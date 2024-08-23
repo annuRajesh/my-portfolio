@@ -68,11 +68,11 @@ const Timeline = () => {
     })
 
   return (
-    <div className="container mx-auto py-10">
+    <motion.div ref={ref} variants={variants} initial='initial' animate={controls} transition={{duration:0.75,delay:0.5}} className="container mx-auto py-10">
       <motion.h1 className="text-4xl bg-gradient-to-b from-secondary to-gray-300 text-transparent bg-clip-text m-4" ref={ref} variants={variants} initial='initial' animate={controls}>My Life Evolutions</motion.h1>
       <div className="relative m-4">
         {timeline.map((item, index) => (
-          <motion.div key={index} className=" mb-12" ref={ref} variants={variants} initial='initial' animate={controls}>
+          <motion.div key={index} className=" mb-12" >
             
 
           
@@ -92,7 +92,7 @@ const Timeline = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
