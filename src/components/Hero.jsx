@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <>
       
-        <div className="container mx-auto mt-14 flex  flex-col justify-start items-start w-full   ">
+        <div className="container mx-auto mt-14 flex  flex-col justify-start items-start w-full   " id="hero">
          
           
 <div className="md:w-1/2 w-full">

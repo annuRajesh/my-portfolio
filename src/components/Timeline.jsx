@@ -54,7 +54,7 @@ const Timeline = () => {
 
   return (
     <div className="container mx-auto py-10">
-      <h1 className="text-5xl bg-gradient-to-b from-secondary to-gray-300 text-transparent bg-clip-text m-4">My Life Evolutions</h1>
+      <h1 className="text-4xl bg-gradient-to-b from-secondary to-gray-300 text-transparent bg-clip-text m-4">My Life Evolutions</h1>
       <div className="relative m-4">
         {timeline.map((item, index) => (
           <div key={index} className=" mb-12">

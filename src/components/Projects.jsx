@@ -45,7 +45,7 @@ const container = {
 <>
 <div className="container mx-auto pb-4">
 
-<h2 className="text-5xl bg-gradient-to-b from-secondary to-gray-400 text-transparent bg-clip-text m-5">Projects</h2>
+<h2 className="text-4xl bg-gradient-to-b from-secondary to-gray-400 text-transparent bg-clip-text m-5">Projects</h2>
 <motion.div variants={container}
     initial="hidden"
     animate="visible" className="container mx-auto grid md:grid-cols-3 grid-cols-1 gap-4 m-4">
