@@ -2,12 +2,16 @@ import ProjectCard from "./ProjectCard"
 import { motion } from "framer-motion";
 const Projects=()=>{
     const projects=[
-       
+       {
+        heading:'Notes MernStack',
+        github:'https://github.com/annuRajesh/Notes_MernStack/tree/main',
+        link:'https://notes-mern-stack.vercel.app/'
+       },
        
         {
             heading:'Nursing Colleges',
             github:'https://github.com/annuRajesh/NursingCollegeBangalore',
-            link:'https://nursing-college-bangalore.vercel.app/'
+            link:'https://nursingcollegesbangalore.in/'
 
     
     },
